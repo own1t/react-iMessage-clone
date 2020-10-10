@@ -6,6 +6,9 @@ import { Avatar, IconButton } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import RateReviewOutlinedIcon from "@material-ui/icons/RateReviewOutlined";
 
+// Components
+import SidebarChat from "./SidebarChat";
+
 // CSS
 import "./Sidebar.css";
 
@@ -25,7 +28,9 @@ const Sidebar = () => {
         </IconButton>
       </div>
 
-      <div className="sidebar__chats"></div>
+      <div className="sidebar__chats">
+        <SidebarChat />
+      </div>
     </div>
   );
 };
