@@ -44,13 +44,17 @@ const Sidebar = () => {
     }
   };
 
+  const handleSignOut = () => {
+    auth.signOut();
+  };
+
   return (
     <div className="sidebar">
       <div className="sidebar__header">
         <Avatar
           className="sidebar__avatar"
           src={user.photo}
-          onClick={() => auth.signOut()}
+          onClick={handleSignOut}
         />
 
         <div className="sidebar__input">
@@ -58,8 +62,12 @@ const Sidebar = () => {
           <input placeholder="Search" />
         </div>
 
-        <IconButton className="sidebar__inputButton" variant="outlined">
-          <RateReviewOutlinedIcon onClick={addChat} />
+        <IconButton
+          className="sidebar__inputButton"
+          variant="outlined"
+          onClick={addChat}
+        >
+          <RateReviewOutlinedIcon />
         </IconButton>
       </div>
 
