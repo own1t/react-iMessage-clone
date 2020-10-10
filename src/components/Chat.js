@@ -5,6 +5,9 @@ import React, { useEffect, useState } from "react";
 import { IconButton } from "@material-ui/core";
 import MicNoneIcon from "@material-ui/icons/MicNone";
 
+// React Flip Move
+import FlipMove from "react-flip-move";
+
 // Redux
 import { useSelector } from "react-redux";
 import { selectChatId, selectChatName } from "../features/chatSlice";
@@ -71,9 +74,11 @@ const Chat = () => {
       </div>
 
       <div className="chat__body">
-        {messages.map(({ id, data }) => (
-          <Message key={id} content={data} />
-        ))}
+        <FlipMove>
+          {messages.map(({ id, data }) => (
+            <Message key={id} content={data} />
+          ))}
+        </FlipMove>
       </div>
 
       <div className="chat__input">
