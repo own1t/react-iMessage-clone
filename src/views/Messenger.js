@@ -1,11 +1,18 @@
 // React
 import React from "react";
 
+// Components
+import Sidebar from "../components/Sidebar";
+
 // CSS
 import "./Messenger.css";
 
-const IMessage = () => {
-  return <div className="messenger"></div>;
+const Messenger = () => {
+  return (
+    <div className="messenger">
+      <Sidebar />
+    </div>
+  );
 };
 
-export default IMessage;
+export default Messenger;
